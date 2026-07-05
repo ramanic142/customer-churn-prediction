@@ -2,11 +2,15 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load the trained model and preprocessing objects
-model = joblib.load("churn_model.pkl")
-scaler = joblib.load("scaler.pkl")
-label_encoders = joblib.load("label_encoders.pkl")
-feature_columns = joblib.load("feature_columns.pkl")
+import os
+
+# Get the folder this script lives in, so paths work regardless of where the app is run from
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = joblib.load(os.path.join(BASE_DIR, "churn_model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+label_encoders = joblib.load(os.path.join(BASE_DIR, "label_encoders.pkl"))
+feature_columns = joblib.load(os.path.join(BASE_DIR, "feature_columns.pkl"))
 
 st.set_page_config(page_title="Customer Churn Predictor", page_icon="📊", layout="centered")
 
