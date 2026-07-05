@@ -38,7 +38,7 @@ Trained and compared Logistic Regression and Random Forest classifiers. Logistic
 
 ## 🚀 Live App
 
-Try the live prediction app here: **[Link coming soon]**
+Try the live prediction app here: **[Customer Churn Predictor](https://customer-churn-prediction-db2wbdpan8q4td4fyhiac2.streamlit.app)**
 
 Enter a hypothetical customer's details and get an instant churn risk prediction with probability score.
 
